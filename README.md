@@ -99,11 +99,15 @@ sdit-cahaya-ilmu/
 
 ## 🛠️ Cara Penggunaan
 
-1. Clone atau download repository ini
+1. Clone repository dari: https://github.com/cahayailmukrw/sdit.git
 2. Tambahkan gambar-gambar sekolah ke folder `assets/img/`
 3. Sesuaikan informasi kontak dan data sekolah
 4. Upload ke web hosting atau gunakan local server
 5. Buka `index.html` di browser
+
+## 🌐 Repository
+- **GitHub Repository**: https://github.com/cahayailmukrw/sdit.git
+- **GitHub Pages**: https://cahayailmukrw.github.io/sdit/
 
 ## 📝 Customization
 
