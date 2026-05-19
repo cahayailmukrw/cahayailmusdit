@@ -1,0 +1,8 @@
+{
+  "name": "cahayailmusdit",
+  "version": "1.0.0",
+  "description": "SDIT Cahaya Ilmu Website",
+  "scripts": {
+    "build": "echo 'Static site - no build needed'"
+  }
+}
