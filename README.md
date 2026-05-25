@@ -96,9 +96,10 @@ sdit-cahayailmu/
 - Tahun Pelajaran
 
 ### Kontak & Pendaftaran
-- Informasi kontak lengkap
-- Formulir kontak
+- Informasi kontak lengkap (Telepon: 08212079917)
+- Formulir kontak dengan integrasi WhatsApp
 - Validasi form
+- Pesan otomatis terformat untuk WhatsApp
 
 ### Footer
 - Social media links
@@ -110,6 +111,7 @@ sdit-cahayailmu/
 
 - **Smooth Scrolling** - Navigasi halus antar section
 - **Mobile Menu** - Hamburger menu untuk perangkat mobile
+- **WhatsApp Integration** - Kirim pesan langsung ke WhatsApp dengan format yang rapi
 - **Form Validation** - Validasi input pada form kontak
 - **Counter Animation** - Animasi angka untuk statistik
 - **Hover Effects** - Interactive hover states pada cards
@@ -196,6 +198,7 @@ Tambahkan gambar-gambar berikut ke folder `assets/img/`:
 ## 📞 Support
 
 Untuk pertanyaan atau dukungan:
+- Telepon: 08212079917
 - Email: cahayailmukrw@gmail.com
 - SDIT Cahaya Ilmu
 

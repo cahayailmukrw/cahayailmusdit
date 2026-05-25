@@ -70,45 +70,53 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Form Validation and Submission
-const contactForm = document.querySelector('.contact-form form');
+const contactForm = document.querySelector('#contactForm');
 if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
         
-        // Get form data
-        const formData = new FormData(contactForm);
-        const formObject = {};
-        formData.forEach((value, key) => {
-            formObject[key] = value;
-        });
+        // Get form values
+        const name = document.getElementById('contactName').value;
+        const email = document.getElementById('contactEmail').value;
+        const subject = document.getElementById('contactSubject').value;
+        const message = document.getElementById('contactMessage').value;
         
         // Simple validation
-        const name = contactForm.querySelector('input[type="text"]').value;
-        const email = contactForm.querySelector('input[type="email"]').value;
-        const phone = contactForm.querySelector('input[type="tel"]').value;
-        const classSelect = contactForm.querySelector('select').value;
-        
-        if (!name || !email || !phone || !classSelect) {
+        if (!name || !subject || !message) {
             showNotification('Mohon lengkapi semua field yang wajib diisi!', 'error');
             return;
         }
         
-        // Email validation
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(email)) {
-            showNotification('Format email tidak valid!', 'error');
-            return;
+        // Email validation if provided
+        if (email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                showNotification('Format email tidak valid!', 'error');
+                return;
+            }
         }
         
-        // Phone validation
-        const phoneRegex = /^[0-9]+$/;
-        if (!phoneRegex.test(phone)) {
-            showNotification('Nomor telepon hanya boleh mengandung angka!', 'error');
-            return;
+        // Construct WhatsApp message
+        let whatsappMessage = `*Formulir Kontak SDIT Cahaya Ilmu*\n\n`;
+        whatsappMessage += `*Nama:* ${name}\n`;
+        if (email) {
+            whatsappMessage += `*Email:* ${email}\n`;
         }
+        whatsappMessage += `*Subjek:* ${subject}\n`;
+        whatsappMessage += `*Pesan:* ${message}\n`;
+        
+        // Encode message for URL
+        const encodedMessage = encodeURIComponent(whatsappMessage);
+        
+        // WhatsApp number (convert 08212079917 to international format 628212079917)
+        const whatsappNumber = '628212079917';
+        
+        // Open WhatsApp with pre-filled message
+        const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+        window.open(whatsappUrl, '_blank');
         
         // Show success message
-        showNotification('Pendaftaran berhasil! Kami akan menghubungi Anda segera.', 'success');
+        showNotification('Mengarahkan ke WhatsApp...', 'success');
         
         // Reset form
         contactForm.reset();
