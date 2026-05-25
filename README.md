@@ -200,6 +200,8 @@ Tambahkan gambar-gambar berikut ke folder `assets/img/`:
 Untuk pertanyaan atau dukungan:
 - Telepon: 08212079917
 - Email: cahayailmukrw@gmail.com
+- Instagram: https://www.instagram.com/sditcahayailmukrw
+- TikTok: https://www.tiktok.com/@sditcahayailmukrw
 - SDIT Cahaya Ilmu
 
 ## 🤝 Kontribusi
